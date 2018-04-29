@@ -7,17 +7,17 @@ public class Frodo extends Hobbit {
 
   public static void main(String[] args){
     final int frodoGold=7;
-    System.out.println(new Frodo().sumGold(frodoGold));
+    System.out.println(sumGold(frodoGold));
   }
 }
 class Hobbit{
-  private final int hobbitGold = 6;
+  private final static int hobbitGold = 6;
 
-  public int getHobbitGold() {
+  public static int getHobbitGold() {
     return hobbitGold;
   }
 
-  int sumGold(int x, int ... y){
+  static int sumGold(int x, int ... y){
     int base = ((y.length>0)?y[0]:getHobbitGold());
     return x+base;
   }
